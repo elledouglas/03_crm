@@ -7,13 +7,13 @@ get '/' do
 end
 
 get '/about' do
-
   erb :about
 end
 
 get '/contacts' do
 @contacts = Contact.all
-erb :contacts
+puts"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#{@contacts}"
+  erb :contacts
 end
 
 get '/contact' do
@@ -30,7 +30,6 @@ else
 end
 
   # erb :contacts
-
 end
 
 # get '/contact' do

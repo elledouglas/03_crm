@@ -20,8 +20,8 @@ get '/contacts' do
 end
 
 get 'contacts/:id' do
-  recipe_id = params[:id]
-  @contacts = Recipe.find(contact_id)
+  contact_id = params[:id]
+  @contacts = Contact.find(contact_id)
 
   erb :contact
 end
