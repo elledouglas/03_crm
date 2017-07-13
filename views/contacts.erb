@@ -16,8 +16,8 @@
 <ul>
 <% @contacts.each do |contact| %>
 <li>
-<a href="/contacts">
-<%= "#{contact.first_name}"%></a>
+<!-- <a href="/contacts"> -->
+<%= "#{contact.first_name}     #{contact.last_name}                       #{contact.email}"%></a>
     <p class="point"><a href="contacts/<%=contact.id%>/edit"> Edit </a>| <a href="contacts/<%=contact.id%>/delete"> Delete </a></p>
 
 </li>

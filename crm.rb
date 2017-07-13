@@ -10,11 +10,11 @@ get '/about' do
   erb :about
 end
 
-get '/contacts' do
-@contacts = Contact.all
-puts"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#{@contacts}"
-  erb :contacts
-end
+# get '/contacts' do
+# @contacts = Contact.all
+# puts"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#{@contacts}"
+#   erb :contacts
+# end
 
 get '/contact' do
   erb :contact
