@@ -1,8 +1,14 @@
-require_relative './contact.rb'
+# require_relative '/contact'
 require 'sinatra'
+require_relative 'contact'
 
-get '/index' do
-  erb :index
+get '/' do
+  redirect to ('/about')
+end
+
+get '/about' do
+
+  erb :about
 end
 
 get '/contacts' do
@@ -10,6 +16,9 @@ get '/contacts' do
 erb :contacts
 end
 
+get '/contact' do
+  erb :contact
+end
 
 get '/contacts/:id' do
   # params[:id] contains the id from the URL
@@ -24,19 +33,16 @@ end
 
 end
 
-get '/contact.erb/' do
-  #show
-erb :contact
-end
-
-get '/about' do
-
-  erb :about
-end
+# get '/contact' do
+#   #show
+# erb :contact
+# end
 
 
 
-end
+
+
+
 after do
   ActiveRecord::Base.connection.close
 end

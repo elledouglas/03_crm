@@ -4,6 +4,7 @@ require 'active_record'
 require 'mini_record'
 
 ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'CRM.sqlite3')
+
 class Contact < ActiveRecord::Base
 
   field :first_name, as: :string
@@ -18,6 +19,8 @@ class Contact < ActiveRecord::Base
   # kathleen = Contact.new("Kathleen", "Douglas", "kathleendouglas@gmail.com", "123")
   # puts kathleen
 end
+
+Contact.auto_upgrade!
 
 at_exit do
   ActiveRecord::Base.connection.close
