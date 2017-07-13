@@ -15,6 +15,11 @@ class Contact < ActiveRecord::Base
     "#{ first_name } #{ last_name }"
   end
 
+  # kathleen = Contact.new("Kathleen", "Douglas", "kathleendouglas@gmail.com", "123")
+  # puts kathleen
 end
 
-Contact.auto_upgrade!
+at_exit do
+  ActiveRecord::Base.connection.close
+end
+#Contact.auto_upgrade!

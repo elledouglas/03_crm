@@ -3,7 +3,11 @@
 <% @contacts = ["kathleen", "devon", "john", "susie", "shaun"] %>
 <ul>
 <%@contacts.each do |contact| %>
-<li><%= contact %></li>
+<li>
+<a href="/contacts/<%= contact.id %>">
+</a>
+
+</li>
 
 <% end %>
 </ul>
