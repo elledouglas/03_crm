@@ -2,7 +2,7 @@ require 'sinatra'
 require_relative 'contact'
 #relative is a file I WROTE not a gem
 get '/' do
-  redirect to ('/contacts')
+  redirect to ('/about')
 
 end
 
@@ -25,5 +25,19 @@ get 'contacts/:id' do
 
   erb :contact
 end
+
+get 'add_contact' do
+  erb :add_contact
+end
+
+post '/contact/:id' do
+"Edit contact #{params}"
+erb
+end
+
+
+delete '/contact' do
+  "DELETE request: #{params}"
+  end
 
 #sinatra provides params - the wildcard is in this hash!
